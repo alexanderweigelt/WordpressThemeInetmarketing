@@ -1,10 +1,12 @@
-# Bootstrap Theme
+Wordpress Theme Inetmarketing
+=============================
+ 
 
  Theme Name: Default Bootstrap
  Theme URI: http://alexander-weigelt.de
  Author: Alexander Weigelt
  Author URI: http://alexander-weigelt.de
- Description: Default Theme basierend auf Bootstrap als Vorlage zur individuellen Erstellung von Websites.
+ Description: Default Theme based on bootstrap as a template for individual website creation with wordpress.
  Version: 0.1.0
  License: GNU General Public License v2 or later
  License URI: http://www.gnu.org/licenses/gpl-2.0.html
