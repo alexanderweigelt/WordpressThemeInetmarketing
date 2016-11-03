@@ -1,0 +1,210 @@
+/* ==========================================================================
+ WordPress Core
+ ========================================================================== */
+
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.aligncenter{
+  &div {
+    display: block;
+    margin: 5px auto 5px auto;
+  }
+}
+
+.alignright {
+  float:right;
+  margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%; /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center;
+
+  &.alignnone {
+    margin: 5px 20px 20px 0;
+  }
+  &.alignleft {
+    margin: 5px 20px 20px 0;
+  }
+  &.alignright {
+    margin: 5px 0 20px 20px;
+  }
+  img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+  }
+  p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+  }
+}
+
+.sticky {
+  padding-top:    $jumbotron-padding;
+  padding-bottom: $jumbotron-padding;
+  margin-bottom: $jumbotron-padding;
+  color: $jumbotron-color;
+  background-color: $jumbotron-bg;
+  h1,
+  .h1 {
+    color: $jumbotron-heading-color;
+  }
+
+  p {
+    margin-bottom: ($jumbotron-padding / 2);
+    font-size: $jumbotron-font-size;
+    font-weight: 200;
+  }
+}
+
+.gallery-item {
+  float: left;
+  margin-top: 10px;
+  text-align: center;
+  width: 33%; }
+
+.gallery-caption {
+  margin-left: 0;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  &:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+  }
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserinfo {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+ /* ==========================================================================
+    custom theme support
+    ========================================================================== */
+
+input.submit {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: $btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  white-space: nowrap;
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+  @include user-select(none);
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: $btn-default-color;
+    text-decoration: none;
+  }
+
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+
+.commentList {
+  border: 1px solid #e0e0e0;
+  padding: 0;
+  li{
+    list-style-position: inside;
+    padding: 1em;
+    &:nth-child(even) {
+      background: #EEEEEE;
+    }
+  }
+  .bypostauthor {
+    border-top: 10px solid #e0e0e0;
+  }
+}
+a.page-numbers:hover {
+  text-decoration: none;
+  color: $pagination-hover-color;
+  background-color: $pagination-hover-bg;
+  border-color: $pagination-hover-border;
+}
+.page-numbers {
+  padding: $padding-base-vertical $padding-base-horizontal;
+  line-height: $line-height-base;
+  text-decoration: none;
+  color: $pagination-color;
+  background-color: $pagination-bg;
+  border: 1px solid $pagination-border;
+  margin-left: -1px;
+  &.current{
+    color: $pagination-hover-color;
+    background-color: $pagination-hover-bg;
+    border-color: $pagination-hover-border;
+  }
+}
+
+.wp-post-image {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}

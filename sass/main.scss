@@ -1,0 +1,50 @@
+/*!
+ Theme Name: Bootstrap
+ Theme URI: http://alexander-weigelt.de
+ Author: Alexander Weigelt
+ Author URI: http://alexander-weigelt.de
+ Description: Default Theme basierend auf Bootstrap als Vorlage zur individuellen Erstellung von Websites. Zur Anwendung kommt Bootstrap v3.3.6. Erfahre mehr unter http://getbootstrap.com/
+ Version: 0.1.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ Tags: white, blue
+*/
+
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+// Import Bootstrap for Sass
+@import "bootstrap";
+// Import Wordpress Core Style
+@import "custom-wordpress";
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+#mainHeader {
+  background: #EEEEEE;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+#mainContent {
+  background-color: rgba(255, 255, 255, .4);
+  overflow: hidden;
+  padding: 1em;
+  border-radius: 5px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#mainSidebar {
+  padding: 1em;
+}
+
+#mainFooter {
+  background: #EEEEEE;
+  padding: 1em;
+  border-radius: 5px;
+}
