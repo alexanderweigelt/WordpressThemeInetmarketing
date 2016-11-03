@@ -98,6 +98,8 @@ add_theme_support('post-thumbnails');
 set_post_thumbnail_size(200, 200, true);
 add_image_size('single-view', 400, 300);
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
+/* Declaring WooCommerce Support in this Theme */
+add_theme_support( 'woocommerce' );
 
 /*
 *
