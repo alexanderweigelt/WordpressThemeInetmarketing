@@ -182,6 +182,14 @@ function theme_script_manager() {
 add_action('wp_enqueue_scripts', 'theme_script_manager');
 
 /*
+ *
+ * Disabling the Default Stylesheet from woocommerce plugin and Starting From Scratch
+ *
+ */
+
+define('WOOCOMMERCE_USE_CSS', false);
+
+/*
 *
 * WordPress Breadcrumb (ohne Plugin)
 *
