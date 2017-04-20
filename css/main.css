@@ -1,14 +1,14 @@
 @charset "UTF-8";
 /*!
- Theme Name: Default Bootstrap
+ Theme Name: Bootstrap
  Theme URI: http://alexander-weigelt.de
  Author: Alexander Weigelt
  Author URI: http://alexander-weigelt.de
- Description: Default Theme basierend auf Bootstrap als Vorlage zur individuellen Erstellung von Websites.
+ Description: Default Theme basierend auf Bootstrap als Vorlage zur individuellen Erstellung von Websites. Zur Anwendung kommt Bootstrap v3.3.6. Erfahre mehr unter http://getbootstrap.com/
  Version: 0.1.0
  License: GNU General Public License v2 or later
  License URI: http://www.gnu.org/licenses/gpl-2.0.html
- Tags: white
+ Tags: white, blue
 */
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
@@ -249,8 +249,8 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url(font-url("fonts/glyphicons-halflings-regular.eot", true));
-  src: url(font-url("fonts/glyphicons-halflings-regular.eot?#iefix", true)) format("embedded-opentype"), url(font-url("fonts/glyphicons-halflings-regular.woff2", true)) format("woff2"), url(font-url("fonts/glyphicons-halflings-regular.woff", true)) format("woff"), url(font-url("fonts/glyphicons-halflings-regular.ttf", true)) format("truetype"), url(font-url("fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular", true)) format("svg"); }
+  src: url("fonts/glyphicons-halflings-regular.eot");
+  src: url("fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("fonts/glyphicons-halflings-regular.woff") format("woff"), url("fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 
 .glyphicon {
   position: relative;
@@ -5827,5 +5827,242 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+
+/* ==========================================================================
+ WordPress Core
+ ========================================================================== */
+.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.aligncenterdiv {
+  display: block;
+  margin: 5px auto 5px auto; }
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+a img.alignnone {
+  margin: 5px 20px 20px 0; }
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center; }
+  .wp-caption.alignnone {
+    margin: 5px 20px 20px 0; }
+  .wp-caption.alignleft {
+    margin: 5px 20px 20px 0; }
+  .wp-caption.alignright {
+    margin: 5px 0 20px 20px; }
+  .wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto; }
+  .wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px; }
+
+.sticky {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #eeeeee; }
+  .sticky h1,
+  .sticky .h1 {
+    color: inherit; }
+  .sticky p {
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 200; }
+
+.gallery-item {
+  float: left;
+  margin-top: 10px;
+  text-align: center;
+  width: 33%; }
+
+.gallery-caption {
+  margin-left: 0; }
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+  .screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */ }
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserinfo {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+    custom theme support
+    ========================================================================== */
+input.submit {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4; }
+  input.submit:hover, input.submit:focus, input.submit.focus {
+    color: #333;
+    text-decoration: none; }
+  input.submit:focus, input.submit.focus {
+    color: #fff;
+    background-color: #286090;
+    border-color: #122b40; }
+  input.submit:hover {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74; }
+  input.submit:active, input.submit.active,
+  .open > input.submit.dropdown-toggle {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74; }
+    input.submit:active:hover, input.submit:active:focus, input.submit:active.focus, input.submit.active:hover, input.submit.active:focus, input.submit.active.focus,
+    .open > input.submit.dropdown-toggle:hover,
+    .open > input.submit.dropdown-toggle:focus,
+    .open > input.submit.dropdown-toggle.focus {
+      color: #fff;
+      background-color: #204d74;
+      border-color: #122b40; }
+  input.submit:active, input.submit.active,
+  .open > input.submit.dropdown-toggle {
+    background-image: none; }
+  input.submit.disabled:hover, input.submit.disabled:focus, input.submit.disabled.focus, input.submit[disabled]:hover, input.submit[disabled]:focus, input.submit[disabled].focus,
+  fieldset[disabled] input.submit:hover,
+  fieldset[disabled] input.submit:focus,
+  fieldset[disabled] input.submit.focus {
+    background-color: #337ab7;
+    border-color: #2e6da4; }
+  input.submit .badge {
+    color: #337ab7;
+    background-color: #fff; }
+
+.commentList {
+  border: 1px solid #e0e0e0;
+  padding: 0; }
+  .commentList li {
+    list-style-position: inside;
+    padding: 1em; }
+    .commentList li:nth-child(even) {
+      background: #EEEEEE; }
+  .commentList .bypostauthor {
+    border-top: 10px solid #e0e0e0; }
+
+a.page-numbers:hover {
+  text-decoration: none;
+  color: #23527c;
+  background-color: #eeeeee;
+  border-color: #ddd; }
+
+.page-numbers {
+  padding: 6px 12px;
+  line-height: 1.428571429;
+  text-decoration: none;
+  color: #337ab7;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-left: -1px; }
+  .page-numbers.current {
+    color: #23527c;
+    background-color: #eeeeee;
+    border-color: #ddd; }
+
+.wp-post-image {
+  margin-left: 1rem;
+  margin-bottom: 1rem; }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+#mainHeader {
+  background: #EEEEEE;
+  padding: 1em;
+  border-radius: 5px; }
+
+#mainContent {
+  background-color: rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+  padding: 1em;
+  border-radius: 5px;
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+#mainSidebar {
+  padding: 1em; }
+
+#mainFooter {
+  background: #EEEEEE;
+  padding: 1em;
+  border-radius: 5px; }
 
 /*# sourceMappingURL=main.css.map */
