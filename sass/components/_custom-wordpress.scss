@@ -79,16 +79,16 @@ a img.aligncenter {
   padding-top:    $jumbotron-padding;
   padding-bottom: $jumbotron-padding;
   margin-bottom: $jumbotron-padding;
-  color: $jumbotron-color;
+  color: $gray-dark;
   background-color: $jumbotron-bg;
   h1,
   .h1 {
-    color: $jumbotron-heading-color;
+    color: $headings-color;
   }
 
   p {
     margin-bottom: ($jumbotron-padding / 2);
-    font-size: $jumbotron-font-size;
+    font-size: $font-size-base;
     font-weight: 200;
   }
 }
@@ -156,13 +156,12 @@ input.submit {
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   white-space: nowrap;
-  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
-  @include user-select(none);
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-border-radius);
 
   &:hover,
   &:focus,
   &.focus {
-    color: $btn-default-color;
+    color: $btn-primary-color;
     text-decoration: none;
   }
 
@@ -190,12 +189,12 @@ a.page-numbers:hover {
   border-color: $pagination-hover-border;
 }
 .page-numbers {
-  padding: $padding-base-vertical $padding-base-horizontal;
+  padding: $pagination-padding-y $pagination-padding-x;
   line-height: $line-height-base;
   text-decoration: none;
   color: $pagination-color;
   background-color: $pagination-bg;
-  border: 1px solid $pagination-border;
+  border: 1px solid $pagination-border-color;
   margin-left: -1px;
   &.current{
     color: $pagination-hover-color;
