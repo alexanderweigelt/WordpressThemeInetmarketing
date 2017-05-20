@@ -1,0 +1,60 @@
+{
+  "name": "bootstrap",
+  "description": "Default Theme based on bootstrap as a template for individual website creation. It's responsive, mobile first for projects on the web.",
+  "version": "0.2.0",
+  "keywords": [
+    "css",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "homepage": "http://alexander-weigelt.de",
+  "author": {
+    "name": "Alexander Weigelt",
+    "url": "https://github.com/alexanderweigelt/"
+  },
+  "scripts": {
+    "change-version": "node grunt/change-version.js",
+    "clean-css": "cleancss --skip-advanced --source-map --output style.min.css style.css && cleancss --skip-advanced --source-map --output style-grid.min.css style-grid.css && cleancss --skip-advanced --source-map --output normalize.min.css normalize.css",
+    "sass": "node-sass --output-style expanded --source-map true --precision 6 sass/style.scss style.css && node-sass --output-style expanded --source-map true --precision 6 sass/style-grid.scss style-grid.css && node-sass --output-style expanded --source-map true --precision 6 sass/normalize.scss normalize.css",
+    "uglify": "uglifyjs --compress warnings=false --mangle --comments '/^!/' --output javascript/bootstrap.min.js javascript/bootstrap.js"
+  },
+  "style": "style.css",
+  "sass": "sass/style.scss",
+  "main": "javascript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexanderweigelt/WordpressThemeInetmarketing.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "jquery": ">=1.9.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "clean-css": "^3.4.23",
+    "eslint": "^3.12.2",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-compress": "^1.3.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "load-grunt-tasks": "^3.5.2",
+    "node-sass": "^4.1.1",
+    "time-grunt": "^1.4.0",
+    "uglify-js": "^2.7.5"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "package.json",
+    "javascript/**/*.js",
+    "sass/**/*.scss",
+    "Gruntfile.js"
+  ]
+}

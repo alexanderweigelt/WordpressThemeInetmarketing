@@ -1,0 +1,40 @@
+/*!
+ Theme Name: Bootstrap
+ Theme URI: http://alexander-weigelt.de
+ Author: Alexander Weigelt
+ Author URI: http://alexander-weigelt.de
+ Description: Default Theme basierend auf Bootstrap als Vorlage zur individuellen Erstellung von Websites. Zur Anwendung kommt Bootstrap v4.0.0-alpha.6 (Erfahre mehr unter http://getbootstrap.com/)
+ Version: 0.2.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ Tags: white, blue
+*/
+
+// Import Bootstrap for Sass
+@import "bootstrap/bootstrap";
+
+// Import FontAwesome for Sass
+@import "font-awesome/variables";
+@import "font-awesome/mixins";
+@import "font-awesome/path";
+@import "font-awesome/core";
+@import "font-awesome/larger";
+@import "font-awesome/fixed-width";
+@import "font-awesome/list";
+@import "font-awesome/bordered-pulled";
+@import "font-awesome/animated";
+@import "font-awesome/rotated-flipped";
+@import "font-awesome/stacked";
+@import "font-awesome/icons";
+@import "font-awesome/screen-reader";
+
+// Import Wordpress Core Style
+@import "components/custom-wordpress";
+
+// Import Author's custom style
+@import "components/header";
+@import "components/navigation";
+@import "components/content";
+@import "components/sidebar";
+@import "components/widgets";
+@import "components/footer";
