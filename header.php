@@ -6,7 +6,6 @@
 		<meta charset="<?php bloginfo( 'charset' ); get_bloginfo( 'name' ); ?>">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="text/css">
 		<link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/images/favicon.ico" />
 		<link rel="apple-touch-icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/images/apple-touch-icon.png">
 

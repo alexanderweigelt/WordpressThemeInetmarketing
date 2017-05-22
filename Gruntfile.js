@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 
     // Task configuration.
     clean: {
-      css: ['./*.css', '*.css.map']
+      css: ['*.css', '*.css.map', '*.min.css']
     },
 
     jshint: {
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
       },
       all: [
         'Gruntfile.js',
-        'javascripts/bootstrap/*.js',
+        'javascripts/**/*.js',
         '!javascripts/bootstrap.min.js',
         '!javascripts/jquery-1.11.2.min.js',
         '!javascripts/modernizr-2.8.3-respond-1.4.2.min.js'
@@ -75,40 +75,45 @@ module.exports = function(grunt) {
     sass: {
       develop: {
         options: {
-          sourceMap: true
+          sourceMap: true,
+          outputStyle: 'expanded'
         },
-        files: {
-          'style.css': 'sass/style.scss',
-          'style-grid.css': 'sass/style-grid.scss',
-          'normalize.css': 'sass/normalize.scss'
-        }
+        files: [{
+          expand: true,
+          cwd: 'sass',
+          src: ['*.scss'],
+          dest: '.',
+          ext: '.css'
+        }]
       },
       distribution: {
         options: {
-          outputStyle: 'compressed'
+          outputStyle: 'compact'
         },
-        files: {
-          'style.css': 'sass/style.scss',
-          'style-grid.css': 'sass/style-grid.scss',
-          'normalize.css': 'sass/normalize.scss'
-        },
+        files: [
+          '<%= sass.develop.files %>'
+        ],
         tasks: ['cssmin']
       }
     },
 
     // minifying css task
     cssmin: {
-      dist: {
-        files: {
-          'style.min.css': 'style.css'
-        }
+      target: {
+        files: [{
+          expand: true,
+          cwd: '.',
+          src: ['*.css', '!*.min.css'],
+          dest: '.',
+          ext: '.min.css'
+        }]
       }
     },
 
     watch: {
       sass: {
         files: 'sass/**/*.scss',
-        tasks: ['sass:develop']
+        tasks: ['clean', 'sass:develop']
       },
       js: {
         files: [
@@ -124,16 +129,19 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-sass');
 
   // Register tasks
   grunt.registerTask('default', [
+    'clean',
     'sass:develop'
   ]);
 
   grunt.registerTask('deploy', [
     'clean',
     'sass:distribution',
+    'cssmin',
     'jshint',
     'uglify'
   ]);
