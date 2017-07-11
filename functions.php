@@ -148,6 +148,19 @@ add_action( 'admin_init', 'bootstrap_add_editor_styles' );
 
 /*
  *
+ * Remove WP Backend Editor (Menu button)
+ *
+ */
+
+function remove_menu_elements() {
+	remove_submenu_page( 'themes.php', 'theme-editor.php' );
+	remove_submenu_page( 'plugins.php','plugin-editor.php' );
+}
+
+add_action( 'admin_init', 'remove_menu_elements', 102);
+
+/*
+ *
  * Making jQuery Google API
  *
  */
